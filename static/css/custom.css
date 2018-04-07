@@ -1,35 +1,19 @@
-.header .logo-wrapper .logo {
-  font-family: "Microsoft Yahei"
+html body {
+  font-family: Georgia ,微軟正黑體, "Microsoft JhenHei", "Microsoft Yahei";
 }
 
-.header .site-navbar .menu .menu-item-link {
-  font-size: 14px
+article {
+  border: 1px solid rgba(0,0,0,.09);
+  padding: 25px;
 }
 
-.header .site-navbar .menu {
-  font-family: "Microsoft Yahei"
-}
-
-.mobile-navbar .mobile-header-logo .logo {
-  font-family: "Microsoft Yahei"
-}
-
-header {
-  background-color: #fff;
-  font-family: "Microsoft Yahei"
-}
-
-body {
-  background-color: #fff;
-  font-family: "Microsoft Yahei"
-}
-
-.content-wrapper {
-  background-color: #fff;
+div .content {
+  font-size: 20px;
 }
 
 .NodeJS {
   background-color: green;
   color: #fff;
-  border-radius: 5px
+  border-radius: 5px;
+  font-family: 微軟正黑體, "Microsoft JhenHei", "Microsoft Yahei" !important;
 }

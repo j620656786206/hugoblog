@@ -1,22 +1,25 @@
 ---
+author: "Alex Yu"
 title: "從Hexo轉向Hugo"
 date: 2018-03-27T19:51:34-05:00
-lastmod: 2018-03-29
+lastmod: 2018-03-30
 tags: ["Hexo", "Hugo"]
-categories: ["Dev"]
+categories: ["網站開發"]
 ---
-
-## 為什麼使用Hugo
 
 一開始我選擇了Hexo做為我寫blog的工具,很大原因是我覺得Hexo的Next滿好看的,而且也有支援Github Page, build的速度感覺應該不會輸給Jekyll, 那時候雖然有考慮Hugo, 不過因為我對golang沒有經驗, 所以一開始還是沒有選擇它。
 
-不過後來我便後悔了，因為我想讓blog有中英兩種語言, 而我用Hexo成功的方式是將原本的資料夾完整複製一份, 然後新增一個資料夾在原本的blog資料夾並將複製的資料夾貼上。 這做法我覺得很蠢, 因為這樣變成是每當我新增一篇文章我必須要在兩邊的資料夾內都先build一遍 
+<!--more-->
+
+# 為什麼使用Hugo
+
+不過後來我便後悔了,因為我想讓blog有中英兩種語言, 而我用Hexo成功的方式是將原本的資料夾完整複製一份, 然後新增一個資料夾在原本的blog資料夾並將複製的資料夾貼上。 這做法我覺得很蠢, 因為這樣變成是每當我新增一篇文章我必須要在兩邊的資料夾內都先build一遍 
 
 而且不知道為什麼我一開始使用hexo的next主題時預設的語言就是英文, 我新增中文網站後還是無法順利使用i18n讓他抓到Next裡language資料夾對應的語言檔, google的結果跟官網的docs也沒有很清楚的說明
 
 基於以上種種原因, 我便跳到了Hugo
 
-## 安裝Hugo
+# 安裝Hugo
 
 我的電腦環境Windows 10, 如果是Mac的人請參照官網的doc教學
 
@@ -36,7 +39,7 @@ categories: ["Dev"]
 
 若沒有什麼問題便代表正確安裝完成了~
 
-## 安裝Hugo Theme
+# 安裝Hugo Theme
 
 新增一個blog的方式如下
 
@@ -47,7 +50,7 @@ categories: ["Dev"]
 而我選擇的theme是一個叫[jane](https://github.com/xianmin/hugo-theme-jane)的主題
 
 
-## 設定檔
+# 設定檔
 
 由於我想要做中文跟英文雙語的blog, 所以我首先便在<code>/theme/jane/i18n</code>底下新增<code>zh-tw.yaml</code>檔案, 然後在<code>/blog/config.toml</code>的menu部分修改成
 
@@ -120,9 +123,10 @@ categories: ["Dev"]
 
 ## 最後
 
-不知道是因為theme的關係還是我有動到哪裡的設定, 中文首頁的頁面layout似乎有問題, 這點可能還要看如何修改
+~~不知道是因為theme的關係還是我有動到哪裡的設定, 中文首頁的頁面layout似乎有問題, 這點可能還要看如何修改~~
 
 {{< figure src="/img/postscreenshot.jpg">}}
 
+原來只要在markdown裡想要的地方加入<code><!--more--></code>就可以顯示部分內容, problem solved~
 
 以後在再加上font-awesome的圖案跟自製css
