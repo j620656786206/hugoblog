@@ -1,0 +1,70 @@
+header {
+  background-color: #fff;
+  font-family: Georgia, 微軟正黑體, "Microsoft JhenHei", "Microsoft Yahei";
+}
+
+body {
+  background-color: #fff;
+}
+
+p {
+  font-family: Georgia, 微軟正黑體, "Microsoft JhenHei", "Microsoft Yahei";
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+}
+
+div .content {
+  border: 1px solid #d3d6db;
+}
+
+
+.header .logo-wrapper .logo {
+  font-family: Georgia ,微軟正黑體, "Microsoft JhenHei", "Microsoft Yahei";
+  font-weight: bolder;
+  font-size: 36px;
+}
+
+.header .site-navbar .menu .menu-item-link {
+  font-size: 14px
+}
+
+.header .site-navbar .menu {
+  font-family: Georgia ,微軟正黑體, "Microsoft JhenHei", "Microsoft Yahei";
+}
+
+.mobile-navbar .mobile-header-logo .logo {
+  font-family: Georgia, 微軟正黑體, "Microsoft JhenHei", "Microsoft Yahei";
+}
+
+.post .post-header .post-title {
+  font-family: Georgia, 微軟正黑體, "Microsoft JhenHei", "Microsoft Yahei";
+  font-weight: bolder;
+  font-size: 42px;
+}
+
+.post .post-content h1, .post .post-content h2, .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6{
+  font-family: Georgia, 微軟正黑體, "Microsoft JhenHei", "Microsoft Yahei";
+  font-weight: bolder;
+}
+
+.post-summary {
+  font-family: Georgia, 微軟正黑體, "Microsoft JhenHei", "Microsoft Yahei";
+  font-size: 21px;
+}
+
+.content-wrapper {
+  background-color: #fff;
+}
+
+.NodeJS {
+  background-color: green;
+  color: #fff;
+  border-radius: 5px;
+  
+}
+
+.article {
+  border: 1px solid #d3d6db;
+}

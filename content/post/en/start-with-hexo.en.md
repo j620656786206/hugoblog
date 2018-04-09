@@ -1,12 +1,12 @@
 ---
 author: "Alex Yu"
 date: 2018-03-19
-title: "Start with Hexo"
+title: "Started with Hexo"
 tags: ["Hexo", "Next"]
 categories: ["Development"]
 ---
 
-# Why I start with Hexo instead of Jekyll or Hugo
+# Why I started with Hexo instead of Jekyll or Hugo
 
 At the beginning, I just want to create my blog with GitHub page without other complicated setup. At first, Jekyll is the first result came out from the search. I knew Jekyll has many pros and to me, its biggest pro is that
 

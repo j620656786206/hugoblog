@@ -10,6 +10,21 @@ googleAnalytics = "trackingcode"
 tag = "tags"
 category = "categories"
 
+[languages]
+  [languages.zh-tw]
+    title = "工程師與貓"
+    baseURL = "https://j620656786206.github.io/"
+    weight = 1
+    [languages.zh-tw.params]
+      linkedin = "zh-tw-link"
+  [languages.en]
+    title = "A Developer, and A cat"
+    baseURL = "https://j620656786206.github.io/en/"
+    weight = 2
+    [languages.en.params]
+      linkedin = "english-link"
+  
+
 [params]
 description = "Your description here"
 keywords = ["keyword 1", "keyword 2", "keyword 3"]
@@ -17,6 +32,16 @@ author = "Alex Yu"
 sharingicons = true
 displayauthor = true
 customCSS = ['custom.css']
+
+[[params.menu]]
+name = "home"
+url = "#"
+fa_icon = "fa-home"
+
+[[params.menu]]
+name = "globe"
+url = "/en"
+fa_icon = "fa-globe"
 
 [params.highlight]
 style = "github"
@@ -27,25 +52,6 @@ url = "https://github.com/j620656786206"
 fa_icon = "fa-github"
 
 [[params.social]]
-url = "#"
-fa_icon = "fa-gitlab"
-
-[[params.social]]
-url = "#"
-fa_icon = "fa-twitter"
-
-[[params.social]]
-url = "https://www.linkedin.com/in/chih-wei-yu-14b896a3/"
-fa_icon = "fa-linkedin-square"
-
-[[params.social]]
 url = "/index.xml"
 fa_icon = "fa-rss"
 
-[[params.socialshare]]
-url = "https://www.linkedin.com/in/chih-wei-yu-14b896a3/"
-fa_icon = "fa-linkedin-square"
-
-[[params.menu]]
-name="home"
-url="#"
