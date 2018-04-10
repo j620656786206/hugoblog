@@ -7,13 +7,35 @@ article {
   padding: 25px;
 }
 
+img.resize {
+  max-width: 100%;
+  height: auto;
+}
+
 div .content {
   font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+  margin-top: 80px;
+  font-weight: bolder !important;
+}
+
+a {
+  text-decoration: none;
 }
 
 .NodeJS {
   background-color: green;
   color: #fff;
   border-radius: 5px;
-  font-family: 微軟正黑體, "Microsoft JhenHei", "Microsoft Yahei" !important;
+  font-family: 微軟正黑體, "Microsoft JhenHei", "Microsoft Yahei";
+}
+
+.gatsbyjs {
+  background-color: #663399;
+  color: #fff !important;
+  border-radius: 5px;
+  font-family: 微軟正黑體, "Microsoft JhenHei", "Microsoft Yahei";
 }

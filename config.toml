@@ -1,6 +1,5 @@
 baseurl = "https://j620656786206.github.io/"
-languageCode = "en"
-title = "A Developer, and A Cat"
+DefaultContentLanguage = "zh-tw"
 theme = "Hucore"
 copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/mgjohansen\" target=\"_blank\">Twitter</a> | <a href=\"https://github.com/mgjohansen/hucore.git\" target=\"_blank\">Hucore theme</a> & <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
 disqusShortname = "j620656786206"
@@ -13,13 +12,13 @@ category = "categories"
 [languages]
   [languages.zh-tw]
     title = "工程師與貓"
-    baseURL = "https://j620656786206.github.io/"
+    languageCode = "zh-tw"
     weight = 1
     [languages.zh-tw.params]
       linkedin = "zh-tw-link"
   [languages.en]
     title = "A Developer, and A cat"
-    baseURL = "https://j620656786206.github.io/en/"
+    languageCode = "en"
     weight = 2
     [languages.en.params]
       linkedin = "english-link"
