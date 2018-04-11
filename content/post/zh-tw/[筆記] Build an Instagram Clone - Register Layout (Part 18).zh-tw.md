@@ -1,7 +1,7 @@
 ---
 title:  "[筆記] Build an Instagram Clone - Register Layout (Part 18)"
 date: 2018-04-05T12:59:02-05:00
-tags: ["Instagram"]
+tags: ["InstagramClone"]
 categories: ["Android"]
 ---
 
