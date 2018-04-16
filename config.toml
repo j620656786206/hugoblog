@@ -14,16 +14,72 @@ category = "categories"
     title = "工程師與貓"
     languageCode = "zh-tw"
     weight = 1
-    [languages.zh-tw.params]
-      linkedin = "zh-tw-link"
+    [[languages.zh-tw.params.menu]]
+      name = "首頁"
+      url = "#"
+      fa_icon = "home"
+      weight = 2
+    [[languages.zh-tw.params.menu]]
+      name = "分類"
+      url = "/categories"
+      fa_icon = "th-large"
+      weight = 3
+    [[languages.zh-tw.params.menu]]
+      name = "標籤"
+      url = "/tags"
+      fa_icon = "tag"
+      weight = 4
+    [[languages.zh-tw.params.menu]]
+      name = "英文"
+      url = "/en"
+      fa_icon = "globe"
+      weight = 5
+    [[languages.zh-tw.params.menu]]
+      name = "github"
+      url = "https://github.com/j620656786206"
+      fa_icon = "github"
+      weight = 6
+    [[languages.zh-tw.params.menu]]
+      name = "rss"
+      url = "/index.xml"
+      fa_icon = "rss"
+      weight = 7
+
   [languages.en]
     title = "A Developer, and A cat"
     languageCode = "en"
-    weight = 2
-    [languages.en.params]
-      linkedin = "english-link"
+    weight = 8
+    [[languages.en.params.menu]]
+      name = "home"
+      url = "#"
+      fa_icon = "home"
+      weight = 9
+    [[languages.en.params.menu]]
+      name = "category"
+      url = "/en/categories"
+      fa_icon = "th-large"
+      weight = 10
+    [[languages.en.params.menu]]
+      name = "tag"
+      url = "/en/tags"
+      fa_icon = "tag"
+      weight = 11
+    [[languages.en.params.menu]]
+      name = "中文"
+      url = "/"
+      fa_icon = "globe"
+      weight = 12
+    [[languages.en.params.menu]]
+      name = "github"
+      url = "https://github.com/j620656786206"
+      fa_icon = "github"
+      weight = 13
+    [[languages.en.params.menu]]
+      name = "rss"
+      url = "/index.xml"
+      fa_icon = "rss"
+      weight = 14
   
-
 [params]
 description = "Your description here"
 keywords = ["keyword 1", "keyword 2", "keyword 3"]
@@ -32,25 +88,7 @@ sharingicons = true
 displayauthor = true
 customCSS = ['custom.css']
 
-[[params.menu]]
-name = "home"
-url = "#"
-fa_icon = "fa-home"
-
-[[params.menu]]
-name = "globe"
-url = "/en"
-fa_icon = "fa-globe"
-
 [params.highlight]
 style = "github"
 languages = ["go", "dockerfile"]
-
-[[params.social]]
-url = "https://github.com/j620656786206"
-fa_icon = "fa-github"
-
-[[params.social]]
-url = "/index.xml"
-fa_icon = "fa-rss"
 
