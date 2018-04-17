@@ -7,7 +7,12 @@ thumbnail: "instagramclone_logo.png"
 dirname: "testing-firebase-authentication-part-21"
 ---
 
+從上個部份的<code>HomeActivity</code>複製Firebase的部分過來, 然後依照Firebase的步驟加入code, 這個部份當時我要在simulator上面run的時候app一直crash, 
+
 <!--more-->
+
+後來才發現我要在<code>private void setupFirebaseAuth()</code>加入<code>mAuth = FirebaseAuth.getInstance();</code>, 我在之前的<code>HomeActivity</code>是在<code>onCreate</code>中宣告, 這個地方要注意一下
+
 
 # Code
 
