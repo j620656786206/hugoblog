@@ -81,7 +81,7 @@ category = "categories"
       weight = 14
   
 [params]
-description = "Your description here"
+description = "程式筆記, 曬貓照, 美食分享"
 keywords = ["keyword 1", "keyword 2", "keyword 3"]
 author = "Alex Yu"
 sharingicons = true

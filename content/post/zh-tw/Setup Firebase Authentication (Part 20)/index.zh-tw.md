@@ -1,8 +1,8 @@
 ---
 title: "[筆記] Build an Instagram Clone - Setup Firebase Authentication (Part 20)"
 date: 2018-04-13T12:44:10-05:00
-tags: ["InstagramClone"]
-categories: ["Android"]
+tags: ["InstagramClone", "Firebase"]
+categories: ["Android", "筆記"]
 thumbnail: "instagramclone_logo.png"
 dirname: "setup-firebase-authentication-part-20"
 ---
