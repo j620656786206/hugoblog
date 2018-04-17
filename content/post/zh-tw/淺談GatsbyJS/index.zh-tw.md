@@ -4,6 +4,7 @@ date: 2018-04-09T21:16:37-05:00
 tags: ["GatsbyJS", "React"]
 categories: ["網站開發"]
 thumbnail: "gatsby_logo.jpg"
+dirname: "淺談GatsbyJS"
 ---
 
 前陣子在逛medium的時候偶然看到了<a href="https://www.gatsbyjs.org/" class="gatsbyjs">GatsbyJS</a>, 大概了解了一下後, 知道<a href="https://www.gatsbyjs.org/" class="gatsbyjs">GatsbyJS</a>是用React框架做的一個static site generator, 原本正在煩惱我是否又要從Hugo跳到<a href="https://www.gatsbyjs.org/" class="gatsbyjs">GatsbyJS</a>, 但研究了一下後, 我還是繼續選擇了Hugo

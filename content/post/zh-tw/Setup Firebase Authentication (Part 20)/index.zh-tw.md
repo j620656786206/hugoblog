@@ -3,6 +3,8 @@ title: "[筆記] Build an Instagram Clone - Setup Firebase Authentication (Part 
 date: 2018-04-13T12:44:10-05:00
 tags: ["InstagramClone"]
 categories: ["Android"]
+thumbnail: "instagramclone_logo.png"
+dirname: "setup-firebase-authentication-part-20"
 ---
 
 由於影片中的Firebase Authentication為版本不同的關係, 步驟已經不一樣了, 少了<code>AuthStateListener</code>的部分, 剩下的基本上都差不多

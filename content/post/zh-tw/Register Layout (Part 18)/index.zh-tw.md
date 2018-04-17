@@ -3,6 +3,8 @@ title:  "[筆記] Build an Instagram Clone - Register Layout (Part 18)"
 date: 2018-04-05T12:59:02-05:00
 tags: ["InstagramClone"]
 categories: ["Android"]
+thumbnail: "instagramclone_logo.png"
+dirname: "register-layout-part-18"
 ---
 
 這個Instagram Clone app我是參照一個youtube頻道[CodingWithMitch](https://www.youtube.com/channel/UCoNZZLhPuuRteu02rh7bzsw)

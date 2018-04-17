@@ -3,6 +3,8 @@ title: "[筆記] Build an Instagram Clone - Get started with Firebase (Part 19)"
 date: 2018-04-10T13:39:37-05:00
 tags: ["InstagramClone"]
 categories: ["Android"]
+thumbnail: "instagramclone_logo.png"
+dirname: "get-started-with-firebase-part-19"
 ---
 
 <!--more-->
