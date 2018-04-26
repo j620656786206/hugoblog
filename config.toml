@@ -12,6 +12,7 @@ category = "categories"
 [languages]
   [languages.zh-tw]
     title = "工程師與貓"
+    description = "程式筆記, 曬貓照, 美食分享"
     languageCode = "zh-tw"
     weight = 1
     [[languages.zh-tw.params.menu]]
@@ -47,6 +48,7 @@ category = "categories"
 
   [languages.en]
     title = "A Developer, and A cat"
+    description = "Technology, Cat, Food"
     languageCode = "en"
     weight = 8
     [[languages.en.params.menu]]
@@ -81,7 +83,7 @@ category = "categories"
       weight = 14
   
 [params]
-description = "程式筆記, 曬貓照, 美食分享"
+
 keywords = ["keyword 1", "keyword 2", "keyword 3"]
 author = "Alex Yu"
 sharingicons = true
