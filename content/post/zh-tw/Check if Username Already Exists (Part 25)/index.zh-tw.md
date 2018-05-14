@@ -17,6 +17,8 @@ dirname: "check-if-username-already-exists-part-25"
 
 接著按照第二個步驟將Firebase的database加到Module:app的gradle裡面
 
+<!--more-->
+
 這邊要稍微注意一下, 一開始我加入的database版本是按照步驟裡的指示, 不過點了sync now以後卻出現錯誤訊息說database的版本跟Firebase還有Authenciation的版本不同, 所以後來我是將database的版本降為一樣
 
     //Firebase Database
