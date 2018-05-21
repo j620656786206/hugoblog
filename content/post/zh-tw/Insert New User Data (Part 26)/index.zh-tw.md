@@ -11,7 +11,11 @@ dirname: "insert-new-user-data-part-26"
 
     //add new user_account_setting to the database
 
-註解刪除, 說這個function會加在
+註解刪除, 
+
+<!--more-->
+
+說這個function會加在
 
     //add new user to the database
 
