@@ -1,6 +1,7 @@
 ---
 title: "[筆記] Build an Instagram Clone - Instagram App Firebase Data Structure (Part 24)"
 date: 2018-05-06T21:30:50-05:00
+lastmod: 2018-05-21
 categories: ["Android", "筆記"]
 tags: ["InstagramClone", "Firebase"]
 thumbnail: "instagramclone_logo.png"
