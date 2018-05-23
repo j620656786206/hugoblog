@@ -31,7 +31,7 @@ category = "categories"
       fa_icon = "tag"
       weight = 4
     [[languages.zh-tw.params.menu]]
-      name = "英文"
+      name = "English"
       url = "/en"
       fa_icon = "globe"
       weight = 5
