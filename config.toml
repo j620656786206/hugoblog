@@ -53,7 +53,7 @@ category = "categories"
     weight = 8
     [[languages.en.params.menu]]
       name = "home"
-      url = "#"
+      url = "/en"
       fa_icon = "home"
       weight = 9
     [[languages.en.params.menu]]
