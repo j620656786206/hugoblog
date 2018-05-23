@@ -1,18 +1,17 @@
 ---
-title: "[筆記] Build an Instagram Clone - Testing Firebase Authentication (Part 21)"
+title: "[Note] Build an Instagram Clone - Testing Firebase Authentication (Part 21)"
 date: 2018-04-17T12:45:25-05:00
 tags: ["InstagramClone", "Firebase"]
-categories: ["Android", "筆記"]
+categories: ["Android", "Note"]
 thumbnail: "instagramclone_logo.png"
 dirname: "testing-firebase-authentication-part-21"
 ---
 
-從上個部份的<code>HomeActivity</code>複製Firebase的部分過來, 然後依照Firebase的步驟加入code. 這個部份當時我要在emulator上面run的時候app一直crash, 
+Copy the Firebase part in <code>HomeActivity</code> from the last part, and follow the instructions in Firebase. I was getting crash when I tried to run the app on emulator,
 
 <!--more-->
 
-後來才發現我要在<code>private void setupFirebaseAuth()</code>加入<code>mAuth = FirebaseAuth.getInstance();</code>, 我在之前的<code>HomeActivity</code>是在<code>onCreate</code>中宣告, 這個地方要注意一下
-
+then I found out I have to add <code>mAuth = FirebaseAuth.getInstance();</code> in <code>private void setupFirebaseAuth()</code>, I declared in <code>onCreate</code> in <code>HomeActivity</code> previously.
 
 # Code
 
@@ -195,6 +194,6 @@ dirname: "testing-firebase-authentication-part-21"
         android:id="@+id/pleaseWait"/>
     </RelativeLayout>
 
-# 影片
+# Video
 
 {{< youtube 9iGpE-9hzCU >}}

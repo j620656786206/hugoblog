@@ -1,23 +1,25 @@
 ---
-title: "[筆記] Build an Instagram Clone - Register New User with Firebase (Part 23)"
+title: "[Note] Build an Instagram Clone - Register New User with Firebase (Part 23)"
 date: 2018-04-30T13:14:43+08:00
 tags: ["InstagramClone", "Firebase"]
-categories: ["Android", "筆記"]
+categories: ["Android", "Note"]
 thumbnail: "instagramclone_logo.png"
 dirname: "register-new-user-with-firebase-part-23"
 ---
 
-步驟跟原作者的不太一樣, 不過只要照著Firebase裡的Authentication, sign up new user步驟做大致上就沒有什麼問題
+My code might be a little different than the author, but as long as followe the steps in Firebase's Authentication->sign up new user, the code  should be fine.
 
 <!--more-->
 
-不過要注意一下的地方在 <code>FirebaseMethods</code>裡的<code>registerNewEmail</code>, 在原本的sign up new user步驟會有
+One thing to note that <code>registerNewEmail</code> in <code>FirebaseMethods</code>, the step in sign up new user has
 
 		this, email, password
-, 需要將<code>mAuth.createUserWithEmailAndPassword</code>的argument改成
+
+, the argument for <code>mAuth.createUserWithEmailAndPassword</code> need to change to
 
 		email, password
-然後接下來則是在<code>Toast.makeText</code>的第一個argument給入<code>mContext</code>就沒有什麼太大問題了
+
+and the first argument for <code>Toast.makeText</code> should be <code>mContext</code>, then the code should work.
 
 # Code
 
@@ -140,6 +142,6 @@ dirname: "register-new-user-with-firebase-part-23"
 			}
     }
 
-# 影片
+# Video
 
 {{< youtube Zqf68sKjG80 >}}

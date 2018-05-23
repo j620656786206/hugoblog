@@ -1,38 +1,33 @@
 ---
-title: "[筆記] Build an Instagram Clone - Insert New User Data (Part 26)"
+title: "[Note] Build an Instagram Clone - Insert New User Data (Part 26)"
 date: 2018-05-20T19:36:47-05:00
-categories: ["Android", "筆記"]
+categories: ["Android", "Note"]
 tags: ["InstagramClone", "Firebase"]
 thumbnail: "instagramclone_logo.png"
 dirname: "insert-new-user-data-part-26"
 ---
 
-一開始先到<code>RegisterActivity</code>將上次的<code>setupFirebaseAuth</code>做一下修改, 作者將<code>myRef.addListenerForSingleValueEvent(new ValueEventListener()</code>裡的
+At the beginning, go to <code>RegisterActivity</code>, and delete the following comment in <code>myRef.addListenerForSingleValueEvent(new ValueEventListener()</code> nested in <code>setupFirebaseAuth</code>
 
     //add new user_account_setting to the database
 
-註解刪除, 
-
 <!--more-->
 
-說這個function會加在
+The author say the function would in
 
     //add new user to the database
 
-裡面
-
-接著到<code>FirebaseMethods</code>新增一個method
+Then go to <code>FirebaseMethods</code> add a new method
 <code>FirebaseMethods</code>
 
     public void addNewUser(String email, String username, String description, String website, String profile_photo) {}
 
-然後先到<code>model/User</code>, 把phone_number的type改成long
-
+Go to <code>model/User</code>, change phone_number's type to long
 <code>model/User</code>
 
     private long phone_number;
 
-並更新<code>Constructor</code>還有<code>Getter and Setter</code>
+Update <code>Constructor</code> and <code>Getter and Setter</code>
 <code>model/User</code>
 
     public User(String user_id, long phone_number, String email, String username) {
@@ -50,13 +45,13 @@ dirname: "insert-new-user-data-part-26"
         this.phone_number = phone_number;
     }
 
-接著回到<code>FirebaseMethods</code>新增兩個全域變數
+Back to <code>FirebaseMethods</code>, add two global variables
 <code>FirebaseMethods</code>
 
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference myRef;
 
-這邊新增的變數可參考Tools->Firebase->Realtime Database->save and retrieve data, 自行斟酌要加哪些變數. 新增後在到<code>Constructor</code>加入<code>mFirebaseDatabase</code>跟<code>myRef</code>的更新
+Depending on the tip from Tools->Firebase->Realtime Database->save and retrieve data, the adding variable may change. After adding, then update the adding variables in <code>Constructor</code>: <code>mFirebaseDatabase</code> and <code>myRef</code>
 
     public FirebaseMethods(Context context) {
         mAuth = FirebaseAuth.getInstance();
@@ -69,7 +64,7 @@ dirname: "insert-new-user-data-part-26"
          */
     }
 
-接著可先到<code>res/values/strings</code>加入
+Then go to <code>res/values/strings</code>
 <code>res/values/strings</code>
 
     <resources>
@@ -88,7 +83,7 @@ dirname: "insert-new-user-data-part-26"
       <string name="dbname_user_account_settings">user_account_settings</string>
     </resources>
 
-然後回到<code>FirebaseMethods</code>的<code>addNewUser</code>
+Back to <code>addNewUser</code> in <code>FirebaseMethods</code>
 <code>FirebaseMethods</code>
 
     public void addNewUser(String email, String username, String description, String website, String profile_photo) {
@@ -99,7 +94,8 @@ dirname: "insert-new-user-data-part-26"
             .setValue(user);
     }
 
-到這邊完成了addNewUser的部分, <code>user_account_settings</code>的部分也是一樣的作法. 先到<code>model</code>新增一個java class <code>UserAccountSettings</code>, 這邊要注意的是變數的大小寫要和Firebase當初設置的大小寫一樣, 不然之後會出錯, 關於設置看下圖
+Here we finish the addNewUser part, <code>user_account_settings</code> are basically the same. Add a new java class named <code>UserAccountSettings</code> in code>model</code> package. Note here the variables' character should stay the same as the Firebase datastructure, otherwise the app would go wrong, the picture of datastructure is shown below
+
 {{< figure src="firebase_data1.jpg" >}}
 
 <code>UserAccountSettings</code>
@@ -209,7 +205,7 @@ dirname: "insert-new-user-data-part-26"
         }
     }
 
-然後在回到<code>addNewUser</code>加入<code>UserAccountSettings</code>的部分
+then back to <code>addNewUser</code> method and add <code>UserAccountSettings</code> part
 <code>FirebaseMethods</code>
 
     public void addNewUser(String email, String username, String description, String website, String profile_photo) {
@@ -235,29 +231,32 @@ dirname: "insert-new-user-data-part-26"
                 .setValue(user);
     }
 
-# 測試階段
+# Testing
 
-接著便可測試程式看哪裡有誤. 一開始我的錯誤是當我註冊新的user時Firebase有成功register user, 但database裡面卻沒有資料, 可是當我在用同樣一組email註冊時database裡就有新的user資料了, 不過在database裡的node是"user"而不是"users", 這點可在<code>res/values/strings</code>做修改. 關於Firebase的相關資料設定可參考下圖
+After all done, we can test the app and see how it goes. First I got a bug, when I was register new user the logcat shows successful register, but the user's information didn't show in the database. When I tried to register one more time with the email address, the database had the new user data, but the node in database was "user" instead of "users", so I knew I made a typo in <code>res/values/strings</code>, but it was a easy fix. About the set up for the firebase can see in the picture below
+
 {{< figure src="firebase_datastructure.jpg" >}}
-另外要注意的一點是Firebase請選擇用Realtime Database, 我當初一開始是用Cloud Firestore, 但新註冊的user資料沒有顯示在裡面, 可能Firebase的部分需要再另外做設定, 在這邊就不另外去深究.
-至於要再按一次register才會有資料的部分我推測是因為第一次FirebaseMethods的addNewUser根本沒有執行到, 原因可能是因為我當初並沒有用<code>AuthStateListener</code>的緣故, 後來測試的結果也如我所料, 所以將<code>onAuthStateChanged</code>以下的code用<code>AuthStateListener</code>包起來便可解決問題. 原本我一開始是包起來後又參照youtube底下跟我有一樣問題的人的作法, 可看下圖
+
+Another thing to mention is that we need to choose Realtime Database in Firebase, I chose Cloud FireStore at the first, but the new user's information dones't show in there. I guess there may need some configuration in the app's firebase part, so in here we just stay with Realtime Database.
+
+And for the database would have data when I register twice, I think it's because the addNewUser method in FirebaseMethods wasn't being execute at the first time, the reason might because that I didn't use <code>AuthStateListener</code> at the beginning, and the following testing approved my point, so I wrapped <code>onAuthStateChanged</code> into <code>AuthStateListener</code> then the problem was solved. At the first I wrapped and followed the comment in the video who had the same problem, as shown in the picture
 
 {{< figure src="youtube_comment.jpg" >}}
 
-不過因為加入<code>finish();</code>會導致register成功後畫面會再導回<code>HomeActivity</code>, 所以我就又將這行code拿掉了
+But added <code>finish();</code> would cause the screen redirect to <code>HomeActivity</code> after register successful, so I took that code off.
 
-關於<code>RegisterActivity</code>跟<code>FirebaseMethods</code>的部分可參考Github連結
+For the complete code of <code>RegisterActivity</code> and <code>FirebaseMethods</code>, please see the github link below.
 
 [RegisterAcitivity.java](https://github.com/j620656786206/InstagramClone/blob/master/app/src/main/java/tabian/com/instagramclone/Login/RegisterActivity.java)
 
 [FirebaseMethods.java](https://github.com/j620656786206/InstagramClone/blob/master/app/src/main/java/tabian/com/instagramclone/Utils/FirebaseMethods.java) 
 
-# 畫面截圖
+# Screenshot
 
 <figure >
  <img style="display: block; margin-left: auto; margin-right: auto;" src="screenshot.gif" height="600px">
 </figure>
 
-# 影片
+# Video
 
 {{< youtube zPYqEpbihCs >}}

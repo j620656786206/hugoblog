@@ -1,33 +1,33 @@
 ---
-title: "[筆記] Build an Instagram Clone - Check if Username Already Exists (Part 25)"
+title: "[Note] Build an Instagram Clone - Check if Username Already Exists (Part 25)"
 date: 2018-05-13T17:54:49-05:00
-categories: ["Android", "筆記"]
+categories: ["Android", "Note"]
 tags: ["InstagramClone", "Firebase"]
 thumbnail: "instagramclone_logo.png"
 dirname: "check-if-username-already-exists-part-25"
 ---
 
-首先打開Android Studio底下的Tools/Firebase
+First openTools/Firebase Android Studio
 
 {{< figure src="tool_firebase.jpg" >}}
 
-右邊欄位會出現Firebase的assitant, 選擇RealTime Database並點選Save and retrieve data
+Right hand sidebar would have Firebase's tips, choose RealTime Database and click Save and retrieve data
 
 {{< figure src="firebase_assistant.jpg" >}}
 
-接著按照第二個步驟將Firebase的database加到Module:app的gradle裡面
+Then followe the second step to add Firebase Database into Module:app gradle
 
 <!--more-->
 
-這邊要稍微注意一下, 一開始我加入的database版本是按照步驟裡的指示, 不過點了sync now以後卻出現錯誤訊息說database的版本跟Firebase還有Authentication的版本不同, 所以後來我是將database的版本降為一樣
+Note here, the version of database I was adding was followed by the step, but I got an error message after I clicked sync now. The error message shows that the version of database is different than the version of Firebase and Authentication, so I changed the version of database to be the same
 
     //Firebase Database
     compile 'com.google.firebase:firebase-database:12.0.1' 
 
-加入成功後右邊會顯示成功訊息
+After successful added, the tip in the right should show successful connect
 {{< figure src="firebase_database_add.jpg" >}}
 
-完成後先到<code>RegisterActivity</code>加入一些全域變數
+Then we can go to <code>RegisterActivity</code>, add some global variable
 <code>Login/RegisterActivity</code>
 
     //firebase
@@ -36,7 +36,7 @@ dirname: "check-if-username-already-exists-part-25"
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference myRef;
 
-然後到底下的<code>setupFirebaseAuth</code>加入以下code. 這邊我不是照著原作者的方式做, 因為在之前的sign in部分我已經沒有加入mAuthListener, 所以有部分的程式都跟原作者不同
+Next go to <code>setupFirebaseAuth</code> method and add following code. Note here I wasn't follow the steps from the author, because I didn't add mAuthListener in previous sing in part, some part of the code might be different that the author.
 <code>Login/RegisterActivity</code>
 
     private void setupFirebaseAuth(){
@@ -73,7 +73,7 @@ dirname: "check-if-username-already-exists-part-25"
         }
     }
 
-接著到新增一個package叫models, 並加入一個java class叫User
+Next add a new package under project folder, name models, and add a java class named User.
 
 <code>models/User</code>
 
@@ -137,7 +137,7 @@ dirname: "check-if-username-already-exists-part-25"
         }
     }
 
-接著到<code>FirebaseMethods</code>加入一個新method<code>checkIfUsernameExists</code>
+Then open <code>FirebaseMethods</code> add a new method called <code>checkIfUsernameExists</code>
 <code>Utils/FirebaseMethods</code>
 
     public boolean checkIfUsernameExists(String username, DataSnapshot datasnapshot) {
@@ -152,7 +152,7 @@ dirname: "check-if-username-already-exists-part-25"
         }
     }
 
-然後到Utils新增一個java class叫StringManipulation
+Next go to Utils, add a new java class named StringManipulation
 
 <code>Utils/StringManipulation</code>
 
@@ -168,7 +168,7 @@ dirname: "check-if-username-already-exists-part-25"
 
     }
 
-然後回到<code>FirebaseMethods</code>完成<code>checkIfUsernameExists</code> Method
+Back to <code>FirebaseMethods</code> and finish <code>checkIfUsernameExists</code> Method
 <code>Utils/FirebaseMethods</code>
 
     public boolean checkIfUsernameExists(String username, DataSnapshot datasnapshot) {
@@ -191,7 +191,7 @@ dirname: "check-if-username-already-exists-part-25"
         return false;
     }
 
-接著回到<code>RegisterActivity</code>完成剩餘的<code>setupFirebaseAuth</code>
+Then go to <code>RegisterActivity</code> finish the rest part of <code>setupFirebaseAuth</code>
 <code>Login/RegisterActivity</code>
 
     private void setupFirebaseAuth(){
@@ -234,8 +234,8 @@ dirname: "check-if-username-already-exists-part-25"
         }
     }
 
-影片中的作者在最後的地方應該是手誤, 最後的code應該該是
+in the end of video the author made a typo, the code should be
 
     username = username + append;
 
-其餘的部分未完待續
+the rest part would continue
