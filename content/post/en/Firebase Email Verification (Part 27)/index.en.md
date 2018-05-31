@@ -1,13 +1,13 @@
 ---
-title: "[筆記] Build an Instagram Clone - Firebase Email Verification (Part 27)"
+title: "[Note] Build an Instagram Clone - Firebase Email Verification (Part 27)"
 date: 2018-05-28T21:07:39-05:00
-categories: ["Android", "筆記"]
+categories: ["Android", "Note"]
 tags: ["InstagramClone", "Firebase"]
 thumbnail: "instagramclone_logo.png"
 dirname: "firebase-email-verification-part-27"
 ---
 
-一開始先到<code>FirebaseMethods</code>的<code>addNewUser</code>加入下面的註解
+First go to <code>FirebaseMethods</code>, add following comments to <code>addNewUser</code>
 
 <!--more-->
 
@@ -24,7 +24,7 @@ dirname: "firebase-email-verification-part-27"
      */
     public void addNewUser(String email, String username, String description, String website, String profile_photo) {}
 
-接著在<code>addNewUser</code>上面加入一個新method叫<code>sendVerificationEmail</code>
+Then add a new method called <code>sendVerificationEmail</code> on top of <code>addNewUser</code>
 
 <code>FirebaseMethods</code>
 
@@ -46,8 +46,7 @@ dirname: "firebase-email-verification-part-27"
         }
     }
 
-
-這個method我們希望在新user註冊的時候執行, 所以在上面的<code>registerNewEmail</code> 當user成功註冊的時候呼叫這個method
+We want this method being invoked when uew user is registered, so go to <code>registerNewEmail</code>, when the user is succefully register call this method
 
 <code>FirebaseMethods</code>
 
@@ -79,7 +78,7 @@ dirname: "firebase-email-verification-part-27"
                 });
     }
 
-然後當新的user註冊後, 這時候他若還沒有點擊email裡的開通連結時, 這個新user應該要在登出的狀態下. 不過因為Firebase註冊新user成功後會自動將這個user登入, 所以我們需要在<code>RegisterActivity</code>的<code>AuthListener</code>呼叫<code>signout()</code>
+After the new user registered, the user's state should be log off if he/she doesn't click the verification link from the verfication email. But the FIrebase would automatically log the new user in when it's successful registered, so we need to call <code>signout()</code> in <code>RegisterActivity</code> -> <code>AuthListener</code>.
 
 <code>RegisterActivity</code>
 
@@ -140,7 +139,7 @@ dirname: "firebase-email-verification-part-27"
         };
     }
 
-接著在else的前面呼叫<code>finish()</code>則是會將畫面導回到上一個Activity, 在這邊的情形是登入畫面<code>LoginActivity</code>. 回到登入畫面後, 當user登入時要檢查他的email是不是已經認證過了, 如果還沒有認證過需要跳出一個訊息說這個email還沒有認證過. 所以到<code>LoginActivity</code>, <code>init</code> method, <code>signInWithEmailAndPassword</code>加入上述功能
+Next, we call <code>finish()</code> before else statement, it will redirect the page to previous Activity, which is the login page <code>LoginActivity</code> in this case. After we back to the login page, we need to check is the user verified yet, if the user is not verified, it should pop out a message tells the user he/she haven't verify yet. So in <code>LoginActivity</code>, <code>init</code> method, <code>signInWithEmailAndPassword</code> add the function we mentioned
 
 <code>LoginActivity</code>
 
@@ -206,25 +205,25 @@ dirname: "firebase-email-verification-part-27"
                 }
             }
         });
+        
+The code checks the email is verfied or not, if yes it redirect the page to <code>HomeActivity</code>, if not then sot he error message and sign the user out
 
-上面的code檢查email是不是有verified過, 如果有 畫面會導回到<code>HomeActivity</code>, 如果沒有則會跳出訊息並將user登出
-
-## Email截圖
+## Email Screenshot
 <figure>
 <img style="display: block; margin-left: auto; margin-right: auto;" src="email-screenshot.jpg">
 </figure>
 
-## 認證截圖
+## Email Verification Screenshot
 <figure>
 <img style="display: block; margin-left: auto; margin-right: auto;" src="verified-screenshot.jpg">
 </figure>
 
-## 程式截圖
+## Program Screenshot
 
 <figure>
 <img style="display: block; margin-left: auto; margin-right: auto;" src="screenshot.gif" height="600px">
 </figure>
 
-# 影片
+# Video
 
 {{< youtube lE24QX8gA_8 >}}
