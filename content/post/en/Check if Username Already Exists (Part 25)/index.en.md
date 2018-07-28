@@ -7,7 +7,7 @@ thumbnail: "instagramclone_logo.png"
 dirname: "check-if-username-already-exists-part-25"
 ---
 
-First openTools/Firebase Android Studio
+First open Tools/Firebase Android Studio
 
 {{< figure src="tool_firebase.jpg" >}}
 

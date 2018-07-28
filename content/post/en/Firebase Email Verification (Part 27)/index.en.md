@@ -46,7 +46,7 @@ Then add a new method called <code>sendVerificationEmail</code> on top of <code>
         }
     }
 
-We want this method being invoked when uew user is registered, so go to <code>registerNewEmail</code>, when the user is succefully register call this method
+We want this method being invoked when new user is registered, so go to <code>registerNewEmail</code>, when the user is succefully register call this method
 
 <code>FirebaseMethods</code>
 
@@ -78,7 +78,7 @@ We want this method being invoked when uew user is registered, so go to <code>re
                 });
     }
 
-After the new user registered, the user's state should be log off if he/she doesn't click the verification link from the verfication email. But the FIrebase would automatically log the new user in when it's successful registered, so we need to call <code>signout()</code> in <code>RegisterActivity</code> -> <code>AuthListener</code>.
+After the new user registered, the user's state should be log off if he/she doesn't click the verification link from the verification email. But the FIrebase would automatically log the new user in when it's successful registered, so we need to call <code>signout()</code> in <code>RegisterActivity</code> -> <code>AuthListener</code>.
 
 <code>RegisterActivity</code>
 
@@ -206,7 +206,7 @@ Next, we call <code>finish()</code> before else statement, it will redirect the 
             }
         });
         
-The code checks the email is verfied or not, if yes it redirect the page to <code>HomeActivity</code>, if not then sot he error message and sign the user out
+The code checks the email is verified or not, if yes it redirect the page to <code>HomeActivity</code>, if not then sot he error message and sign the user out
 
 ## Email Screenshot
 <figure>

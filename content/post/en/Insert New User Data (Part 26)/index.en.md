@@ -7,7 +7,7 @@ thumbnail: "instagramclone_logo.png"
 dirname: "insert-new-user-data-part-26"
 ---
 
-At the beginning, go to <code>RegisterActivity</code>, and delete the following comment in <code>myRef.addListenerForSingleValueEvent(new ValueEventListener()</code> nested in <code>setupFirebaseAuth</code>
+At the beginning, go to <code>RegisterActivity</code>, and delete the following comment in <code>myRef.addListenerForSingleValueEvent(new ValueEventListener())</code> nested in <code>setupFirebaseAuth</code>
 
     //add new user_account_setting to the database
 
@@ -94,7 +94,7 @@ Back to <code>addNewUser</code> in <code>FirebaseMethods</code>
             .setValue(user);
     }
 
-Here we finish the addNewUser part, <code>user_account_settings</code> are basically the same. Add a new java class named <code>UserAccountSettings</code> in code>model</code> package. Note here the variables' character should stay the same as the Firebase datastructure, otherwise the app would go wrong, the picture of datastructure is shown below
+Here we finish the addNewUser part, <code>user_account_settings</code> are basically the same. Add a new java class named <code>UserAccountSettings</code> in <code>model</code> package. Note here the variables' character should stay the same as the Firebase datastructure, otherwise the app would go wrong, the picture of datastructure is shown below
 
 {{< figure src="firebase_data1.jpg" >}}
 

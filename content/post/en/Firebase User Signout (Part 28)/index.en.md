@@ -65,7 +65,7 @@ First go to res/layout, make screen setup in <code>fragment_signout.xml</code>
 
     </RelativeLayout>
 
-Then go to Profile directory, add following global varaibles in <code>SignOutFragment</code>
+Then go to Profile directory, add following global variables in <code>SignOutFragment</code>
 
 <code>SignOutFragment</code>
 
